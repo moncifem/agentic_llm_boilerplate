@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "backend"
+version = "0.1.0"
+description = "Backend of the boiler plate"
+authors = ["Moncif elmouden"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+langchain-core = "^0.3.19"
+langchain-openai = "^0.2.8"
+langgraph = "^0.2.50"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
