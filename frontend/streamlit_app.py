@@ -21,3 +21,20 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.write(message["content"])
 
+# Create chat input
+if prompt := st.chat_input("What's on your mind?"):
+    # Add user message to chat history
+    st.session_state.messages.append({"role": "user", "content": prompt})
+    # Display user message
+    with st.chat_message("user"):
+        st.write(prompt)
+    
+    # Simulate bot response (in a real app, this would be your AI logic)
+    response = f"You said: {prompt}\nThis is a simple echo response."
+    
+    # Add assistant response to chat history
+    st.session_state.messages.append({"role": "assistant", "content": response})
+    
+    # Display assistant response
+    with st.chat_message("assistant"):
+        st.write(response)
